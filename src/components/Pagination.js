@@ -8,13 +8,13 @@ const Pagination = ({increment,decrement, totalItems, itemsPerPage, setPage}) =>
     }
 
     return (
-        <div>
+        <div className="pagination">
             <Button variant='outlined' onClick={decrement}>Anterior</Button>
 
             {pagesNumbers.map(page => (
-                <button onClick={() => setPage(page)} key={page}>
+                <Button onClick={() => setPage(page)} key={page}>
                     {page}
-                </button>
+                </Button>
             ))}
             <Button variant='outlined' onClick={increment}>Siguiente</Button>
             
